@@ -4,7 +4,10 @@ class Parqueadero {
     private String[] puestos = new String[20];
     private int[] tiempos = new int[20];
     private Scanner scanner = new Scanner(System.in);
-        //Declarando las variables de tiempo y puestos
+        /*
+         * Aca se almacenan en Arrays tanto los puestos como el tiempo
+         *  de estacionamiento y tambien se lee los datos del usuario
+         */
     public void menu() {
         int opcion;
         do {
