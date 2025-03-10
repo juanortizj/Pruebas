@@ -14,7 +14,7 @@ class Parqueadero {
             System.out.println("3. Salir");
             System.out.print("Seleccione una opción: ");
             opcion = scanner.nextInt();
-            scanner.nextLine(); 
+            scanner.nextLine();
 
             switch (opcion) {
                 case 1:
@@ -35,11 +35,11 @@ class Parqueadero {
     private void registrarMoto() {
         System.out.println("Registro de moto.");
         mostrarpuestos();
-        System.out.println("Ingrese en qué puesto quiere estar (0-19):");
+        System.out.println("Ingrese en qué puesto quiere estar (0-" + (puestos.length - 1) + "):");
         int puesto = scanner.nextInt();
         scanner.nextLine();
 
-        if (puesto < 0 || puesto >= 20) {
+        if (puesto < 0 || puesto >= puestos.length) {
             System.out.println("Puesto Inválido");
             return;
         }
@@ -56,7 +56,7 @@ class Parqueadero {
         scanner.nextLine();
 
         puestos[puesto] = placa;
-        tiempos[puesto] = tiempo;  
+        tiempos[puesto] = tiempo;
         System.out.println("Moto registrada exitosamente en el puesto " + puesto);
     }
 
@@ -67,7 +67,7 @@ class Parqueadero {
         int puesto = scanner.nextInt();
         scanner.nextLine();
 
-        if (puesto < 0 || puesto >= 20 || puestos[puesto] == null) {
+        if (puesto < 0 || puesto >= puestos.length || puestos[puesto] == null) {
             System.out.println("El puesto seleccionado está vacío o no existe.");
             return;
         }
@@ -93,7 +93,7 @@ class Parqueadero {
 
     private void mostrarpuestos() {
         System.out.println("Puestos disponibles:");
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < puestos.length; i++) {
             System.out.println("Lugar de estacionamiento " + i + ": " + (puestos[i] == null ? "Disponible" : "Ocupado - " + puestos[i]));
         }
     }
