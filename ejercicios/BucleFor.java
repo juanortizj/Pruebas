@@ -1,3 +1,4 @@
+package ejercicios;
 public class BucleFor {
     public static void main(String args[]) {
       primero:
