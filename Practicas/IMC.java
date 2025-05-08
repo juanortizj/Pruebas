@@ -12,7 +12,6 @@ public class IMC {
 
         System.out.println("Por favor ingrese su altura en metros: ");
         double altura = entrada.nextDouble();
-
         double imc = peso / (altura * altura);
         System.out.println("Su IMC es:" + imc);
 
