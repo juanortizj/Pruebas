@@ -9,7 +9,7 @@ public class Bucle {
 
         int opcion = 0;
 
-        while (opcion != 3) {
+        do {
             System.out.println(" MENÚ ");
             System.out.println("1. Saludar. ");
             System.out.println("2. Mostrar mi nombre. ");
@@ -31,7 +31,7 @@ public class Bucle {
             else {
                 System.out.println("Opción no valida, intente otra vez.");
             }
-        }
+        } while (opcion != 3);
 
         entrada.close();
         System.out.println("Programa Finalizado. ");
